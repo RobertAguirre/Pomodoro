@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TimerConfig = () => (
+const TimerConfig = (props) => (
   <div className="row">
     <h3 className="text-primary">Set Timer</h3>
 
@@ -10,7 +10,7 @@ const TimerConfig = () => (
           <label htmlFor="hours">Hours</label>
         </div>
         <div className="col-sm-10">
-          <input id="hours" type="number" className="form-control"/>
+          <input id="hours" type="number" className="form-control" defaultValue={props.baseTime.get('hours')} />
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@ const TimerConfig = () => (
           <label htmlFor="minutes">Minutes</label>
         </div>
         <div className="col-sm-10">
-          <input id="minutes" type="number" className="form-control"/>
+          <input id="minutes" type="number" className="form-control" defaultValue={props.baseTime.get('minutes')} />
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@ const TimerConfig = () => (
           <label htmlFor="seconds">Seconds</label>
         </div>
         <div className="col-sm-10">
-          <input id="seconds" type="number" className="form-control"/>
+          <input id="seconds" type="number" className="form-control" defaultValue={props.baseTime.get('seconds')} />
         </div>
       </div>
     </div>
