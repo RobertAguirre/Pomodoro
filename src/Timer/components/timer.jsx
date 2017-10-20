@@ -80,7 +80,10 @@ class Timer extends Component {
     return (
       <div className="container-fluid">
         <TimerHeader />
-        <TimerDisplay currentTime={this.state.currentTime} />
+        <TimerDisplay
+          currentTime={this.state.currentTime}
+          timerState={this.state.timerState}
+        />
         <TimerBtn
           startTimer={this.startTimer}
           stopTimer={this.stopTimer}
